@@ -17,5 +17,7 @@ app.use(async (ctx, next) => {
 app.use(async ctx => {
   console.log("hello world");
   ctx.body = "Hello World";
+  await Promise.reject("Error").finally(err => err);
 });
+
 app.listen(4000);
