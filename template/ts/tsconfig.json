@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    // "module": "CommonJS",
+    "target": "ES6",
+    "jsx": "react",
+    "removeComments": true,
+    "strictNullChecks": false,
+    // 取消方括号属性取值校验
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
+    "paths": {
+      "Component/*": ["src/component/*"],
+      "Css/*": ["src/css/*"],
+      "Img/*": ["src/img/*"],
+      "Src/*": ["src/*"],
+      "Util/*": ["src/util/*"],
+      "Page/*": ["src/page/*"]
+    }
+  },
+  "ignoreRules": { "ts2307": true },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

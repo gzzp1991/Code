@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./bundle",
+    // "rootDir": "./src",
+    // "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "ES6",
+    "target": "ES6",
+    "removeComments": true,
+    "strictNullChecks": false,
+    "jsx": "react"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
