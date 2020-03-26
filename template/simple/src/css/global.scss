@@ -1,0 +1,13 @@
+@mixin line($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+.line-2 {
+  @include line(2);
+}
+.line-3 {
+  @include line(3);
+}
