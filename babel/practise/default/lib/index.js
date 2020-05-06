@@ -1,30 +1,22 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/classCallCheck"));
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/createClass"));
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var _regenerator = _interopRequireDefault(require("@babel/runtime-corejs3/regenerator"));
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/asyncToGenerator"));
-
-var _setTimeout2 = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/set-timeout"));
-
-var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
-
-var _includes = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/includes"));
-
-var _context;
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var a = function a(d) {
-  return console.log("abc", d);
+  return console.log('abc', d);
 };
 
-var includes = (0, _includes["default"])(_context = [1, 2, 3]).call(_context, 1);
-var p = new _promise["default"](function (resolve, reject) {
-  (0, _setTimeout2["default"])(function () {
+var includes = [1, 2, 3].includes(1);
+var p = new Promise(function (resolve, reject) {
+  setTimeout(function () {
     resolve(1);
   }, 100);
 });
@@ -32,23 +24,23 @@ var p = new _promise["default"](function (resolve, reject) {
 var aa =
 /*#__PURE__*/
 function () {
-  var _ref = (0, _asyncToGenerator2["default"])(
+  var _ref = _asyncToGenerator(
   /*#__PURE__*/
-  _regenerator["default"].mark(function _callee() {
-    return _regenerator["default"].wrap(function _callee$(_context2) {
+  regeneratorRuntime.mark(function _callee() {
+    return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
-        switch (_context2.prev = _context2.next) {
+        switch (_context.prev = _context.next) {
           case 0:
-            _context2.next = 2;
-            return new _promise["default"](function (resolve, reject) {
-              (0, _setTimeout2["default"])(function () {
+            _context.next = 2;
+            return new Promise(function (resolve, reject) {
+              setTimeout(function () {
                 resolve(1);
               }, 500);
             });
 
           case 2:
           case "end":
-            return _context2.stop();
+            return _context.stop();
         }
       }
     }, _callee);
@@ -63,18 +55,22 @@ var Point =
 /*#__PURE__*/
 function () {
   function Point(x, y) {
-    (0, _classCallCheck2["default"])(this, Point);
+    _classCallCheck(this, Point);
+
     this.x = x;
     this.y = y;
   }
 
-  (0, _createClass2["default"])(Point, [{
+  _createClass(Point, [{
     key: "getX",
     value: function getX() {
       return this.x;
     }
   }]);
+
   return Point;
 }();
 
 var cp = new ColorPoint(25, 8);
+Object.assign({}, {});
+Array.from();

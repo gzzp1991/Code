@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as ReactDom from 'react-router-dom';
 
-import Nav from 'Component/nav';
-import Test from 'Page/test';
+import Nav from 'Component/nav/index';
+import Test from 'Page/test/index';
+import Hooks from 'Page/hooks/index';
 import NotFound404 from 'Page/404';
 
 const { BrowserRouter, Route, Switch } = ReactDom;
@@ -16,6 +17,7 @@ export default function App() {
           Please choose route
         </Route>
         <Route path="/test" component={Test} />
+        <Route path="/hooks" component={Hooks} />
         <Route component={NotFound404} />
       </Switch>
     </BrowserRouter>

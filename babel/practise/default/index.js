@@ -1,4 +1,4 @@
-const a = d => console.log("abc", d);
+const a = (d) => console.log('abc', d);
 
 const includes = [1, 2, 3].includes(1);
 
@@ -26,3 +26,7 @@ class Point {
   }
 }
 const cp = new ColorPoint(25, 8);
+
+Object.assign({}, {});
+
+Array.from();

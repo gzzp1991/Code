@@ -12,4 +12,7 @@ export default {
       },
     },
   },
+  hooks: {
+    title: 'hooks',
+  },
 };
