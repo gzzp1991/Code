@@ -1,4 +1,5 @@
 node_modules
 dist
 dll
-.prettierrc.js
+# .prettierrc.js
+# .prettierrc.json
