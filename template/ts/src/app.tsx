@@ -1,12 +1,10 @@
-import * as React from 'react';
-import * as ReactDom from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Nav from 'Component/nav/index';
-import Test from 'Page/test/index';
-import Hooks from 'Page/hooks/index';
+import Nav from 'Component/nav';
+import Test from 'Page/test';
+import Hooks from 'Page/hooks';
 import NotFound404 from 'Page/404';
-
-const { BrowserRouter, Route, Switch } = ReactDom;
 
 export default function App() {
   return (

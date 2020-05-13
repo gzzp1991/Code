@@ -18,7 +18,9 @@
       "Src/*": ["src/*"],
       "Util/*": ["src/util/*"],
       "Page/*": ["src/page/*"]
-    }
+    },
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
   },
   "ignoreRules": { "ts2307": true },
   "include": ["src/**/*"],
