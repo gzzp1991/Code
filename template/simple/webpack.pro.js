@@ -21,8 +21,8 @@ const option = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/,
-        exclude: /node_modules/,
+        test: /\.(s[ac]ss)|(css)$/,
+        exclude: /node_modules[\\\/](?!(react-resizable|react-grid-layout))/,
         use: [
           'style-loader',
           {
