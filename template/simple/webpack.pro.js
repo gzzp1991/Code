@@ -3,8 +3,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const openServer = process.env.OPENSERVER;
+const analyzer = process.env.ANALYZER;
 
 const option = {
   mode: 'production',
@@ -18,6 +20,21 @@ const option = {
   },
   module: {
     rules: [
+      {
+        test: /\.s[ac]ss$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true },
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true },
+          },
+        ],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -55,6 +72,8 @@ const option = {
       // <!-- 指定打包后的文件名字 -->
       filename: 'index.html',
     }),
+    // https://webpack.docschina.org/plugins/context-replacement-plugin
+    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn/),
     new CleanWebpackPlugin(),
   ],
   optimization: {
@@ -97,6 +116,11 @@ if (openServer) {
     port: 8888,
     historyApiFallback: true,
   };
+}
+
+// 打包体积分析
+if (analyzer) {
+  option.plugins.push(new BundleAnalyzerPlugin());
 }
 
 module.exports = option;
