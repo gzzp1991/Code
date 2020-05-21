@@ -17,7 +17,7 @@ export default class AddRemoveLayout extends React.PureComponent {
     super(props);
 
     this.state = {
-      items: [0, 1, 2, 3, 4].map(function (i, key, list) {
+      items: [0, 1, 2, 3, 4].map(function(i, key, list) {
         return {
           i: i.toString(),
           x: i * 2,
@@ -89,7 +89,7 @@ export default class AddRemoveLayout extends React.PureComponent {
     });
   }
 
-  onLayoutChange = (layout) => {
+  onLayoutChange = layout => {
     // this.props.onLayoutChange(layout);
     this.setState({ layout: layout });
   };
@@ -107,7 +107,7 @@ export default class AddRemoveLayout extends React.PureComponent {
           onLayoutChange={this.onLayoutChange}
           onBreakpointChange={this.onBreakpointChange}
           {...this.props}>
-          {_.map(this.state.items, (el) => this.createElement(el))}
+          {_.map(this.state.items, el => this.createElement(el))}
         </ResponsiveReactGridLayout>
       </div>
     );

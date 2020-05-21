@@ -12,7 +12,7 @@ export default class NoDraggingLayout extends React.PureComponent {
     items: 50,
     cols: 12,
     rowHeight: 30,
-    onLayoutChange: function () {},
+    onLayoutChange: function() {},
   };
 
   constructor(props) {
@@ -23,7 +23,7 @@ export default class NoDraggingLayout extends React.PureComponent {
   }
 
   generateDOM() {
-    return _.map(_.range(this.props.items), function (i) {
+    return _.map(_.range(this.props.items), function(i) {
       return (
         <div key={i}>
           <span className="text">{i}</span>
@@ -34,7 +34,7 @@ export default class NoDraggingLayout extends React.PureComponent {
 
   generateLayout() {
     const p = this.props;
-    return _.map(new Array(p.items), function (item, i) {
+    return _.map(new Array(p.items), function(item, i) {
       var y = _.result(p, 'y') || Math.ceil(Math.random() * 4) + 1;
       return {
         x: (i * 2) % 12,

@@ -9,7 +9,7 @@ export default class MessyLayout extends React.PureComponent {
     className: 'layout',
     cols: 12,
     items: 20,
-    onLayoutChange: function () {},
+    onLayoutChange: function() {},
     rowHeight: 30,
   };
 
@@ -18,7 +18,7 @@ export default class MessyLayout extends React.PureComponent {
   };
 
   generateDOM() {
-    return _.map(_.range(this.props.items), function (i) {
+    return _.map(_.range(this.props.items), function(i) {
       return (
         <div key={i}>
           <span className="text">{i}</span>
@@ -29,7 +29,7 @@ export default class MessyLayout extends React.PureComponent {
 
   generateLayout() {
     const p = this.props;
-    return _.map(new Array(p.items), function (item, i) {
+    return _.map(new Array(p.items), function(item, i) {
       const w = Math.ceil(Math.random() * 4);
       const y = Math.ceil(Math.random() * 4) + 1;
       return {
