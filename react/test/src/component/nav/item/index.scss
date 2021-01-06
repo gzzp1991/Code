@@ -1,0 +1,35 @@
+// @import
+
+.nav-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin: 12px 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  // @extend .line-2;
+
+  &.nav-item-leaf:hover {
+    color: rgb(236, 114, 89);
+    font-weight: 700;
+  }
+
+  &.nav-item-notleaf:hover {
+    text-decoration: underline;
+  }
+
+  &.nav-first-item {
+    font-size: 16px;
+  }
+  &.nav-second-item {
+    font-size: 14px;
+  }
+  &.nav-third-item {
+    font-size: 12px;
+  }
+}

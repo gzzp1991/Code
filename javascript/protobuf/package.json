@@ -1,0 +1,21 @@
+{
+  "name": "protobuf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "long": "node long.js",
+    "bigint": "node bigint.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "big-integer": "^1.6.48",
+    "crypto": "^1.0.1",
+    "events": "^3.1.0",
+    "google-protobuf": "^3.12.2",
+    "long": "^4.0.0"
+  }
+}

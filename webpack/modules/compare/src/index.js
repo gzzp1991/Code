@@ -1,2 +1,1 @@
-import { b } from './k';
-console.log(b);
+module.exports = 111111111;

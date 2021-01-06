@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch --progress --color"
+    "build": "webpack --progress --color",
+    "watch": "webpack --watch --progress --color"
   },
   "keywords": [],
   "author": "",

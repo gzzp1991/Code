@@ -87,26 +87,14 @@
 /******/ ({
 
 /***/ "./src/index.js":
-/*!**********************************!*\
-  !*** ./src/index.js + 1 modules ***!
-  \**********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no static exports found */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./src/k.js
-var a = 11111;
-var b = 22222;
-var c = 33333;
-/* harmony default export */ var k = (4444);
-// CONCATENATED MODULE: ./src/index.js
-
-console.log(b);
-
-//# sourceURL=webpack:///./src/index.js_+_1_modules?");
+eval("module.exports = 111111111;\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

@@ -25,7 +25,7 @@ function permute(nums) {
       // 若 nums[i] 之前没被其它坑位用过，则可以理解为“这个数字剩下了”
       if (!visited[nums[i]]) {
         // 给 nums[i] 打个“已用过”的标
-        visited[nums[i]] = 1;
+        visited[nums[i]] = true;
         // 将nums[i]推入当前排列
         curr.push(nums[i]);
         // 基于这个排列继续往下一个坑走去
@@ -33,7 +33,7 @@ function permute(nums) {
         // nums[i]让出当前坑位
         curr.pop();
         // 下掉“已用过”标识
-        visited[nums[i]] = 0;
+        visited[nums[i]] = false;
       }
     }
   }
